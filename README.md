@@ -1,16 +1,16 @@
-
+![CRoCs Logo](assets/logo.png)
 # SwiFT;
 
 **SwiFT** is a lightweight tool for the calibration and data acquisition of 6-axis force/torque sensors, aimed at simplifying and optimizing experimental workflows. This project was developed at the Department of Orthodontics, Pusan National University Dental Hospital.
 
-by Hyeonjin Jo\*, and Yongil Kim<sup>+</sup>   
+by Hyeonjin Jo\* and Yongil Kim<sup>+</sup>   
 
 \* Graduate Student @School of Dentistry, Pusan National University, Republic of Korea  
 <sup>+</sup> Professor @Department of Orthodontics, Pusan National University Dental Hospital, Republic of Korea
 
 -----
 
-## Installation
+## Prerequisites
 
 1.  **Download and Install Miniconda**
 
@@ -78,9 +78,11 @@ by Hyeonjin Jo\*, and Yongil Kim<sup>+</sup>
 5. **Operation Flow**
     - When **Record** starts:
         1. **Calibration** runs for `CALIBRATION_TIME` seconds.
-        2. After calibration, **Recording** runs for `RECORD_TIME` seconds.
-        3. To ensure the full `RECORD_TIME` is captured, there is a delay of `RECORD_BUFFER` seconds before and after the recording period.
+        2. After calibration, press **SPACE** to start recording.  
+           At this stage, seat the clear aligner over the experimental apparatus before proceeding.
+        3. **Recording** then runs for `RECORD_TIME` seconds.
+        4. To ensure the full `RECORD_TIME` is captured, there is a delay of `RECORD_BUFFER` seconds before and after the recording period.
     - **Example**  
       If `CALIBRATION_TIME = 3`, `RECORD_TIME = 5`, and `RECORD_BUFFER = 1`,  
       the sequence will be:  
-      **Calibration (3s) → Delay (1s) → Recording (5s) → Delay (1s)**
+      **Calibration (3s) → [Seat clear aligner over the experimental apparatus → Press SPACE] → Delay (1s) → Recording (5s) → Delay (1s)**
